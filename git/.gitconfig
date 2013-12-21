@@ -1,0 +1,24 @@
+[user]
+	name = 
+	email = 
+[github]
+	user = 
+	token = 
+	password = 
+[core]
+	excludesfile = ~/.gitignore_global
+[color]
+	ui = true
+	diff = true
+[color "diff"]
+	meta = blue black bold
+[alias]
+	lol = log --oneline --graph --decorate --all
+	lolremote = log --oneline --graph --decorate origin/master ^master
+	lolcompare = log --oneline --graph --decorate origin/master ^master
+	st = status
+	ci = commit -s
+	co = checkout
+	br = branch
+	df = diff
+	a = add -P

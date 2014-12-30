@@ -75,7 +75,7 @@ function set_git_branch {
   fi
   
   # Get the name of the branch.
-  branch_pattern="^# On branch ([^${IFS}]*)"    
+  branch_pattern="^On branch ([^${IFS}]*)"    
   if [[ ${git_status} =~ ${branch_pattern} ]]; then
     branch=${BASH_REMATCH[1]}
   fi
@@ -148,6 +148,7 @@ function set_bash_prompt () {
   PS1="${}\[\033[01;31m\]\u@\h \[\033[01;34m\]\W${BRANCH} ${PROMPT_SYMBOL} \[\033[00m\]"
   else
   PS1="${VENV}\[\033[01;32m\]\u@\h \[\033[01;34m\]\W${BRANCH} ${PROMPT_SYMBOL} \[\033[00m\]"
+  #PS1="${VENV}\[\033[01;32m\]liquid \[\033[01;34m\]\W${BRANCH} ${PROMPT_SYMBOL} \[\033[00m\]"
   fi
 }
 
